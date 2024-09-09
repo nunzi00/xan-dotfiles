@@ -12,4 +12,5 @@ git pull
 
 #link
 ln -sf ~/Projects/nvim-xan/config/nvim ~/.config/nvim
+bash /home/lucas/Projects/nvim-xan/config/nvim/dev
 ```
