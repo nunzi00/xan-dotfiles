@@ -161,6 +161,9 @@ lazy.setup({
     }
   },
 
+  -- Harpoon
+  {"theprimeagen/harpoon"},
+
   -- Colorschemes
   "lunarvim/colorschemes",
   "folke/tokyonight.nvim",
