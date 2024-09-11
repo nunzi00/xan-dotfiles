@@ -1,6 +1,4 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
-local options = {
-}
+require 'user.override.user.alpha'
