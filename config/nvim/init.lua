@@ -18,8 +18,15 @@ require "user.alpha"
 require "user.autocommands"
 require "user.dap"
 require "user.neotest"
+function loadrequire(module)
+    local function requiref(module)
+        require(module)
+    end
+    res = pcall(requiref,module)
+end
+loadrequire("user.override.init")
 
-require "user.override.options"
+-- require "user.override.alpha"
 -- luarocks
 -- nvim-nio
 -- lua-curl
