@@ -1,6 +1,6 @@
 ```bash
-mkdir nvim-xan
-cd nvim-xan
+mkdir -p  ~/Projects/nvim-xan
+cd  ~/Projects/nvim-xan
 git init
 git remote add -f origin git@github.com:nunzi00/xan-dotfiles.git
 ## to only retrieve partial repo
@@ -12,5 +12,5 @@ git pull
 
 #link
 ln -sf ~/Projects/nvim-xan/config/nvim ~/.config/nvim
-bash /home/lucas/Projects/nvim-xan/config/nvim/dev
+bash ~/home/lucas/Projects/nvim-xan/config/nvim/dev
 ```
