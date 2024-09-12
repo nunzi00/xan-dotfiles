@@ -40,6 +40,6 @@ startify.section.bottom_buttons.val = {
 startify.section.mru.val = {}
 startify.section.mru_cwd.val = {}
 
-vim.cmd([[autocmd User AlphaReady echo 'Happy coding!!!']])
+-- vim.cmd([[autocmd User AlphaReady echo 'Happy coding!!!']])
 
 alpha.setup(startify.config)
