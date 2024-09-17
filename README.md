@@ -13,7 +13,8 @@ git sparse-checkout set 'README.md'
 
 #link
 ln -sf ~/Projects/nvim-xan/config/nvim ~/.config/nvim
-bash ~/home/lucas/Projects/nvim-xan/config/nvim/dev
-
 sudo npm install -g typescript-language-server typescript
+
+bash ~/Projects/nvim-xan/config/nvim/dev
+
 ```
