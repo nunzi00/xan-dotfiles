@@ -1,4 +1,4 @@
-function loadrequire(module)
+local function loadrequire(module)
     local function requiref(module)
         require(module)
     end
