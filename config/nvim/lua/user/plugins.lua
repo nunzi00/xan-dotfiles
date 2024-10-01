@@ -232,6 +232,13 @@ lazy.setup({
   keys = {
     "ga", -- Default invocation prefix
     { "fr", "<cmd>TextCaseOpenTelescope<CR>", mode = { "n", "x" }, desc = "Telescope" },
-  }}
+  }},
+  {
+  'kiddos/gemini.nvim',
+  build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
+  config = function()
+    require('gemini').setup()
+  end
+}
 })
 
