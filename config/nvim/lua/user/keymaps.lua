@@ -84,7 +84,7 @@ keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- ToggleTerm
 keymap("n", "<F12>", ":ToggleTerm <CR>", opts)
-keymap("n", "<leader>g", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<leader>gg", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Neotest
 keymap("n", "<leader>tr", "<cmd>TextCaseOpenTelescope<cr>", opts)
