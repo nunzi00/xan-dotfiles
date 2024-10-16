@@ -276,6 +276,12 @@ lazy.setup({
         },
       })
     end,
+    keys = {
+      {'<C-c>', "<cmd>Telescope codecompanion<cr>"},
+      {'<C-a>', "<cmd>CodeCompanionChat Toggle<cr>"},
+      {'<LocalLeader>a',"<cmd>CodeCompanionChat Toggle<cr>"},
+      {'ga',"<cmd>CodeCompanionChat Add<cr>",mode = {"v"}},
+    },
 }
 })
 

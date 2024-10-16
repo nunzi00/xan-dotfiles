@@ -63,3 +63,4 @@
 --       })
 --     end,
 
+-- Expand 'cc' into 'CodeCompanion' in the command line
