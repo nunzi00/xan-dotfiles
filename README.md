@@ -4,7 +4,7 @@
 
 mkdir -p  ~/Projects/
 cd ~/Projects/
-git clone --no-checkout https://git@github.com:nunzi00/xan-dotfiles.git nvim-xan
+git clone --no-checkout https://github.com/nunzi00/xan-dotfiles.git nvim-xan
 cd nvim-xan
 git sparse-checkout init --cone
 git checkout main
