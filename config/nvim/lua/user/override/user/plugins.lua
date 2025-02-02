@@ -13,4 +13,7 @@ lazy.setup({
     "ga", -- Default invocation prefix
     { "fr", "<cmd>TextCaseOpenTelescope<CR>", mode = { "n", "x" }, desc = "Telescope" },
   },
-})
+}
+  -- Harpoon
+  {"theprimeagen/harpoon"}
+)
