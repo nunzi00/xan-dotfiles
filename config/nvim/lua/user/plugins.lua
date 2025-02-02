@@ -126,9 +126,28 @@ lazy.setup({
   "nvimtools/none-ls.nvim",
   "jose-elias-alvarez/nvim-lsp-ts-utils",
   "RRethy/vim-illuminate",
+  "onsails/lspkind.nvim",
 
   -- Copilot
-  { 'github/copilot.vim' },
+  -- { 'github/copilot.vim' },
+  {
+    "zbirenbaum/copilot.lua",
+    lazy = true,
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     opts = {
@@ -232,6 +251,55 @@ lazy.setup({
   keys = {
     "ga", -- Default invocation prefix
     { "fr", "<cmd>TextCaseOpenTelescope<CR>", mode = { "n", "x" }, desc = "Telescope" },
-  }}
+  }},
+--   {
+--   'kiddos/gemini.nvim',
+--   build = { 'pip install -r requirements.txt', ':UpdateRemotePlugins' },
+--   config = function()
+--     require('gemini').setup({
+--         menu_key = '<C-c>',
+--       })
+--   end
+-- }
+{
+  "olimorris/codecompanion.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "hrsh7th/nvim-cmp", -- Optional: For using slash commands and variables in the chat buffer
+    "nvim-telescope/telescope.nvim", -- Optional: For using slash commands
+    { "stevearc/dressing.nvim", opts = {} }, -- Optional: Improves `vim.ui.select`
+  },
+
+    config = function()
+      require("codecompanion").setup({
+        adapters = {
+          gemini = function()
+            return require("codecompanion.adapters").extend("gemini", {
+              env = {
+                api_key = "AIzaSyCraPaTokY8tOt9TiVon-sLx2oylxLt2c8"
+              },
+            })
+          end,
+        },
+        strategies = {
+          chat = {
+            adapter = "gemini",
+          },
+          inline = {
+            adapter = "gemini",
+          },
+          agent = {
+            adapter = "gemini",
+          },
+        },
+      })
+    end,
+    keys = {
+      {'<C-c>', "<cmd>Telescope codecompanion<cr>"},
+      {'<C-a>', "<cmd>CodeCompanionChat Toggle<cr>"},
+      {'ga',"<cmd>CodeCompanionChat Add<cr>",mode = {"v"}},
+    },
+}
 })
 
