@@ -2,7 +2,7 @@ local servers = {
   "bashls",
   "dockerls",
   "eslint",
-  "gopls",
+  -- "gopls",
   "html",
   "intelephense",
   "jsonls",
