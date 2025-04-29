@@ -5,7 +5,7 @@ local function loadrequire(module)
     pcall(requiref,module)
 end
 
-loadrequire("user.override.mapleader")
+loadrequire("override.user.mapleader")
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
