@@ -27,8 +27,7 @@ require "user.autocommands"
 require "user.dap"
 require "user.neotest"
 
-loadrequire("user.override.init")
-
+loadrequire("override.init")
 -- luarocks
 -- nvim-nio
 -- lua-curl
