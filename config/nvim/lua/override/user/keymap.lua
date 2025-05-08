@@ -46,5 +46,3 @@ vim.keymap.set("n", "<leader>lr", function()
   require "inc_rename"
   return ":IncRename " .. vim.fn.expand "<cword>"
 end)
-vim.keymap.set("n", "<leader>fr", "<cmd>TextCaseOpenTelescopeQuickChange<CR>")
-
