@@ -3,6 +3,7 @@ return {
   tag = "0.1.4",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope-live-grep-args.nvim" ,
   },
   config = function()
     local builtin = require("telescope.builtin")
@@ -123,7 +124,7 @@ return {
 
     -- require("telescope").load_extension("advanced_git_search")
 
-    -- require("telescope").load_extension("live_grep_args")
+    require("telescope").load_extension("live_grep_args")
 
     -- require("telescope").load_extension("colors")
 
