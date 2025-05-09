@@ -4,6 +4,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-live-grep-args.nvim" ,
+    'nvim-telescope/telescope-ui-select.nvim'
   },
   config = function()
     local builtin = require("telescope.builtin")
@@ -117,7 +118,7 @@ return {
 
     -- require("telescope").load_extension("fzf")
 
-    -- require("telescope").load_extension("ui-select")
+    require("telescope").load_extension("ui-select")
     vim.g.zoxide_use_select = true
 
     -- require("telescope").load_extension("undo")
